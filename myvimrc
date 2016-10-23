@@ -1,0 +1,91 @@
+set ts=4
+set softtabstop=4
+set shiftwidth=4
+set autoindent
+set nu
+set fileencodings=utf-8
+set termencoding=utf-8
+set encoding=utf-8
+
+set scrolloff=10
+" 高亮显示当前行/当前列
+set cursorline
+"开启实时搜索功能
+set incsearch
+nmap <F5> :NERDTree<CR>
+
+
+nmap <Tab> >>
+nmap `<Tab> <<
+vmap <Tab> >
+vmap `<Tab> <
+" 更新svn
+nnoremap <F2> :!svn ci -m ""<CR>
+nnoremap <F1> :!svn up<CR>
+
+"设置<leader> 为 空格 默认是 \
+let mapleader="`"
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+
+"移动分屏窗口
+nnoremap <F11> <C-w>5<
+nnoremap <F12> <C-w>5>
+nnoremap <F9> <C-w>5-
+nnoremap <F10> <C-w>5+
+
+
+
+"set cursorcolumn
+
+
+"查找
+vnoremap <F3> yq:ivimgrep // **/*.*<ESC>8hp<CR>:copen<CR>
+vnoremap <Leader><F3> yq:ivimgrep /\<\>/ **/*.*<ESC>10hp<CR>:copen<CR>
+
+"关闭窗口
+nnoremap <F4> ZZ
+
+" 快捷保存
+nnoremap <F6> :w<CR>
+
+" 自定义
+imap <space><space>  <C-p>
+nmap f *N
+imap ( ()<ESC>i
+imap [ []<ESC>i
+imap <C-u> iiui
+imap ii <Esc>:w<CR>
+
+nmap L gt
+nmap H gT
+
+
+" lua for循环 pairs版本
+imap <Leader>forr for<Space>k,v<Space>in<Space>pairs(iila<Space>do<CR>end<up>ii14la
+" lua for循环 ipairs版本
+imap <Leader>fori for<Space>k,v<Space>in<Space>ipairs(iila<Space>do<CR>end<up>ii15la
+" lua if
+imap <Leader>fi if<Space>then<CR>end<Esc>ka <Esc>i
+
+" C++ if
+imap <Leader>cif if (<Esc>o{<Esc>o}<Esc>kkllla
+" C++ for
+imap <Leader>cfor for (<Esc>o{<Esc>o}<Esc>kklllla
+" C++ ();
+imap <Leader>( (<Esc>A;<Esc>hi
+" {}
+imap <Leader>{ {<CR>}<Esc>O<tab>
+
+nmap <Tab> >>
+vmap <Tab> >
+
+
+vnoremap y "ay
+vnoremap p "ap
+
+
+" autoload _vimrc 修改配置自动更新
+autocmd! bufwritepost .vimrc source /home/wangwenjie/.vimrc
