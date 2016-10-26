@@ -46,6 +46,9 @@ set fileencodings=utf-8
 set termencoding=utf-8
 set encoding=utf-8
 
+"设置不产生.swp文件
+set noswapfile
+"设置上下滚屏宽度
 set scrolloff=10
 " 高亮显示当前行/当前列
 set cursorline
