@@ -59,10 +59,6 @@ set incsearch
 nmap <F5> :NERDTree<CR>
 
 
-nmap <Tab> >>
-nmap `<Tab> <<
-vmap <Tab> >
-vmap `<Tab> <
 " 更新svn
 nnoremap <F2> :!svn ci -m ""<CR>
 nnoremap <F1> :!svn up<CR>
@@ -122,9 +118,6 @@ imap <Leader>cfor for (<Esc>o{<Esc>o}<Esc>kklllla
 imap <Leader>( (<Esc>A;<Esc>hi
 " {}
 imap <Leader>{ {<CR>}<Esc>O<tab>
-
-nmap <Tab> >>
-vmap <Tab> >
 
 
 vnoremap y "ay
