@@ -22,6 +22,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
 Plugin 'vim-scripts/vcscommand.vim'
 
+" Plugin 'brookhong/cscope.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,6 +58,8 @@ set cursorline
 "开启实时搜索功能
 set incsearch
 nmap <F5> :NERDTree<CR>
+" cscope 找到的文本放入quickfix中
+set cscopequickfix=s-,c-,d-,i-,t-,e-	
 
 
 " 更新svn
@@ -84,6 +87,10 @@ nnoremap <F10> <C-w>5+
 "查找
 vnoremap <F3> yq:ivimgrep // **/*.*<ESC>8hp<CR>:copen<CR>
 vnoremap <Leader><F3> yq:ivimgrep /\<\>/ **/*.*<ESC>10hp<CR>:copen<CR>
+
+" cscope 查找
+nnoremap <leader>fa :call CscopeFindInteractive(expand('<cword>'))<CR>
+nnoremap <leader>l :call ToggleLocationList()<CR>
 
 "关闭窗口
 nnoremap <F4> ZZ
@@ -123,9 +130,13 @@ imap <Leader>; <Esc>A;
 nmap <Leader>; <Esc>A;<Esc>;
 
 
-vnoremap y "ay
-vnoremap p "ap
-
+" cscope 
+nnoremap <Leader>fc :cscope find c <cword><CR><C-o>:copen<CR>
+nnoremap <Leader>fd :cscope find d <cword><CR><C-o>:copen<CR>
+nnoremap <Leader>fg :cscope find g <cword><CR><C-o>:copen<CR>
+nnoremap <Leader>fi :cscope find i <cword><CR><C-o>:copen<CR>
+nnoremap <Leader>fs :cscope find s <cword><CR><C-o>:copen<CR>
+nnoremap <Leader>ft :cscope find t <cword><CR><C-o>:copen<CR>
 
 " autoload _vimrc 修改配置自动更新
 autocmd! bufwritepost .vimrc source /home/wangwenjie/.vimrc
