@@ -116,8 +116,11 @@ imap <Leader>cif if (<Esc>o{<Esc>o}<Esc>kkllla
 imap <Leader>cfor for (<Esc>o{<Esc>o}<Esc>kklllla
 " C++ ();
 imap <Leader>( (<Esc>A;<Esc>hi
-" {}
+"C++ {}
 imap <Leader>{ {<CR>}<Esc>O<tab>
+"C++ ;
+imap <Leader>; <Esc>A;
+nmap <Leader>; <Esc>A;<Esc>;
 
 
 vnoremap y "ay
