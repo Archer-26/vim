@@ -21,6 +21,8 @@ Plugin 'tComment'
 Plugin 'scrooloose/nerdtree'
 Plugin 'godlygeek/tabular'
 Plugin 'vim-scripts/vcscommand.vim'
+Plugin 'vim-scripts/DynamicSigns'
+Plugin 'vim-scripts/Marks-Browser'
 
 " Plugin 'brookhong/cscope.vim'
 
@@ -40,6 +42,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " let g:tabular_loaded = 1
+let g:Signs_Bookmarks=1 " 显示mark  
 set ts=4
 set softtabstop=4
 set shiftwidth=4
