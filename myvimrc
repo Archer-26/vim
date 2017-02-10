@@ -23,6 +23,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'vim-scripts/vcscommand.vim'
 Plugin 'vim-scripts/DynamicSigns'
 Plugin 'vim-scripts/Marks-Browser'
+Plugin 'vim-scripts/Vim-JDE'
 
 " Plugin 'brookhong/cscope.vim'
 
@@ -102,7 +103,8 @@ nnoremap <F4> ZZ
 nnoremap <F6> :w<CR>
 
 " 自定义
-imap <space><space>  <C-p>
+imap <C-j>  <C-n>
+imap <C-k>  <C-p>
 nmap f *N
 imap ( ()<ESC>i
 imap [ []<ESC>i
