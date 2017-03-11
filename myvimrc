@@ -135,6 +135,10 @@ imap <Leader>; <Esc>A;
 nmap <Leader>; <Esc>A;<Esc>;
 
 
+set nocst
+set tags=tags;
+set autochdir
+
 " cscope 
 nnoremap <Leader>fc :cscope find c <cword><CR><C-o>:copen<CR>
 nnoremap <Leader>fd :cscope find d <cword><CR><C-o>:copen<CR>
