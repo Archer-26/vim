@@ -24,10 +24,11 @@ Plugin 'godlygeek/tabular'
 Plugin 'vim-scripts/vcscommand.vim'
 Plugin 'vim-scripts/DynamicSigns'
 Plugin 'vim-scripts/Marks-Browser'
-Plugin 'vim-scripts/Vim-JDE'
+"Plugin 'vim-scripts/Vim-JDE'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'fatih/vim-go'
 
 " Plugin 'brookhong/cscope.vim'
 
