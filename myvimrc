@@ -29,6 +29,8 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'fatih/vim-go'
+Plugin 'kien/ctrlp.vim'
+
 
 " Plugin 'brookhong/cscope.vim'
 
@@ -115,7 +117,19 @@ imap ( ()<ESC>i
 imap [ []<ESC>i
 imap <C-u> iiui
 imap ii <Esc>:w<CR>
+imap <leader>g <Esc>:GoFmt<CR>:GoImports<CR>:GoTest<CR>
+nmap <leader>g <Esc>:GoFmt<CR>:GoImports<CR>:GoTest<CR>
+nmap <leader>f :GoReferrers<CR>
 
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:rehash256 = 1
+let g:molokai_original = 1
+let g:go_auto_type_info = 1
+set updatetime=100
 nmap L gt
 nmap H gT
 
@@ -179,7 +193,7 @@ nnoremap <Leader>ft :cscope find t <cword><CR><C-o>:copen<CR>
   let g:airline#extensions#tabline#enabled = 1
   let g:airline#extensions#tabline#buffer_nr_show = 1
 
-" let g:airline_theme="molokai"
+"  let g:airline_theme="molokai"
 colorscheme Monokai
 " autoload _vimrc 修改配置自动更新
 autocmd! bufwritepost .vimrc source ~/.vimrc
